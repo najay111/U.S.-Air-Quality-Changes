@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>U.S. Air Quality Changes -6</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map"></div>
+    <div class="controls">
+     <h1 class="main-title">U.S. Air Quality Changes (2015-2024)</h1> 
+     <button id="switchBasemap">Switch Basemap</button>
+      <button id="toggleHeatmap">Toggle Heatmap</button>
+
+      <h3 class="slider-title">Select a year to view pollution data</h3>
+  <div class="buttons">
+ 
+<button id="pm25" class="pollutant-button" onclick="updateHeatmapData('Days PM2_5', 'pm25')">PM2.5</button>
+<button id="no2" class="pollutant-button" onclick="updateHeatmapData('Max AQI', 'no2')">NO2</button>
+<button id="o3" class="pollutant-button" onclick="updateHeatmapData('Days Ozone', 'o3')">O3</button>
+ </div>
+
+        <label>Year: <span id="yearLabel">2020</span></label>
+        <input type="range" id="timeSlider" min="2015" max="2022" value="2020" step="1" oninput="updateTime()">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
